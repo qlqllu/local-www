@@ -1,0 +1,27 @@
+<html>
+  <script>
+    window.sessionStorage = undefined // not work
+    sessionStorage = undefined // not work
+    delete window.sessionStorage // work
+    console.log(11, window.sessionStorage)
+
+    window.localStorage = undefined // not work
+    localStorage = undefined // not work
+    delete window.localStorage // work
+    console.log(12, window.localStorage)
+
+    document.cookie = undefined // work, but it's the "undefined" string
+    console.log(22, document.cookie)
+
+    window.parent = undefined // work
+    console.log(33, window.parent)
+
+    window.top = undefined // not work
+    delete window.top // not work
+    window.top = null // not work
+    console.log(44, window.top)
+
+    delete window.frameElement // work
+    console.log(55, window.frameElement)
+  </script>
+</html>
