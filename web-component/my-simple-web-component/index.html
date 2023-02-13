@@ -1,0 +1,13 @@
+<html>
+  <script src="./script.js"></script>
+  <my-simple-web-component id="component1" p1="v1"></my-simple-web-component>
+
+  <script>
+    const ele1 = document.getElementById('component1')
+    ele1.setAttribute('p1', 'v2')
+
+    console.log('shadowRoot:', ele1.shadowRoot)
+
+    // ele1.remove() // call remove() will trigger the "disconnectedCallback"
+  </script>
+</html>
