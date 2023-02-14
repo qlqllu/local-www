@@ -1,0 +1,18 @@
+<html>
+  <template id="my-template">
+    <div>Template tile</div>
+    <div>
+      <slot name="slot1"></slot>
+    </div>
+    <div>
+      <slot name="slot2"></slot>
+    </div>
+  </template>
+  <script src="./script.js"></script>
+  <body>
+    <web-component-with-template id="component1">
+      <h2 slot="slot1">H2 for slot1</h2>
+      <h5 slot="slot2">H5 for slot2</h2>
+    </web-component-with-template>
+  </body>
+</html>
