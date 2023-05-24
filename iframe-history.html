@@ -1,0 +1,14 @@
+<html>
+  <iframe id="frame1" src="./a.html"></iframe>
+  <script>
+    console.log('len1:', history.length)
+
+    setTimeout(() => {
+      document.getElementById('frame1').src = './b.html'
+
+      setTimeout(() => {
+        console.log('len2:', history.length)
+      }, 1000)
+    }, 1000)
+  </script>
+</html>
